@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/values', 'RestDataController@index');
+Route::post('/values', 'RestDataController@store');
+Route::patch('/values', 'RestDataController@update');
